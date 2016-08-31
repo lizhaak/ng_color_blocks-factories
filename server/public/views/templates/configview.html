@@ -1,0 +1,14 @@
+<div class="row" ng-controller="SettingsController">
+  <h1>Settings</h1>
+
+  <!-- To Do: UI to add colors to the game. -->
+
+  <select ng-model="selectedColor" ng-change="selectAction()" ng-options="color for color in multipleColors">
+    <option value="">Select colors for the game...</option>
+  </select>
+
+  <h2>Colors Chosen For Game: </h2>
+  <div ng-repeat="color in chosenColors">
+      {{color}}
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="row" id="gameview">
+
+  <h1>{{colorPrompt}}</h1>
+
+  <h3 ng-if="messageText != ''" class="alert alert-warning">{{messageText}}</h3>
+
+  <div id="button-container">
+    <div ng-if="chosenColors.length == 0" class="color-button" ng-repeat="color in givenColors" ng-style="{background: color}" ng-click="handleInput(color)"></div>
+  </div>
+
+  <div id="button-container">
+    <div ng-if="chosenColors.length > 0" class="color-button" ng-repeat="color in chosenColors" ng-style="{background: color}" ng-click="handleInput(color)"></div>
+  </div>
+</div>
